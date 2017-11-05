@@ -21,7 +21,7 @@
     self.countries = @[];
 }
 
-- (IBAction)addCountry:(UIBarButtonItem *)sender {
+- (IBAction)addCountry:(id)sender {
     NSString *text = [[self.countryTextField text] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
     
     if (![text length]) { return; }

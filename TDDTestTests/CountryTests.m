@@ -76,7 +76,7 @@
     
     [viewCon.countryTextField setText:[country name]];
     
-    [viewCon performSelector:@selector(addCountry:) withObject:nil];
+    [[viewCon.addCountryButton target] performSelector:[viewCon.addCountryButton action] withObject:viewCon.addCountryButton];
     
     XCTAssertEqualObjects([[viewCon.countries lastObject] name], [country name]);
 }

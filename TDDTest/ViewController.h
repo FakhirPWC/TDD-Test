@@ -16,6 +16,7 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *countriesTableView;
 @property (weak, nonatomic) IBOutlet UITextField *countryTextField;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *addCountryButton;
 
 @end
 

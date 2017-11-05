@@ -94,6 +94,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addCountryButton" destination="yQ4-Ly-PIf" id="6eW-J6-6fu"/>
                         <outlet property="countriesTableView" destination="bkS-5R-nLi" id="B7V-2H-wWn"/>
                         <outlet property="countryTextField" destination="i2c-FX-tIm" id="vvQ-Lm-1ff"/>
                     </connections>

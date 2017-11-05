@@ -8,8 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+#import "Country.h"
+
 @interface ViewController : UIViewController
 
+@property (nonatomic) NSArray<Country *> *countries;
+
+@property (weak, nonatomic) IBOutlet UITableView *countriesTableView;
+@property (weak, nonatomic) IBOutlet UITextField *countryTextField;
 
 @end
 

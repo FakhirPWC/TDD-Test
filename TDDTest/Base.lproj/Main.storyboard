@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="c7v-uC-FgA">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Countries-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,105 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dht-ea-Zft">
+                                <rect key="frame" x="0.0" y="64" width="0.0" height="0.0"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" id="0Qn-sJ-NdR"/>
+                                    <constraint firstAttribute="width" id="zqR-Vb-Tqs"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bkS-5R-nLi">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="dTL-Nc-mZ9" userLabel="Country Entry View">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Country Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="i2c-FX-tIm">
+                                            <rect key="frame" x="10" y="10" width="355" height="44"/>
+                                            <nil key="textColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                    </subviews>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="i2c-FX-tIm" secondAttribute="trailing" constant="10" id="9KJ-NB-6IJ"/>
+                                        <constraint firstItem="i2c-FX-tIm" firstAttribute="top" secondItem="dTL-Nc-mZ9" secondAttribute="top" constant="10" id="BGl-PH-8Vy"/>
+                                        <constraint firstItem="i2c-FX-tIm" firstAttribute="leading" secondItem="dTL-Nc-mZ9" secondAttribute="leading" constant="10" id="Bkz-bB-JUF"/>
+                                        <constraint firstAttribute="bottom" secondItem="i2c-FX-tIm" secondAttribute="bottom" constant="10" id="cY7-Rv-I0h"/>
+                                    </constraints>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CountryCell" textLabel="BAl-4Y-6rp" style="IBUITableViewCellStyleDefault" id="9r9-vy-OR6">
+                                        <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9r9-vy-OR6" id="Icf-vb-yBB">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Sample Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BAl-4Y-6rp">
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Ue7-4O-G9z"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="cvW-c0-5jZ"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bkS-5R-nLi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="BcT-Ya-hgE"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="bkS-5R-nLi" secondAttribute="bottom" id="D1w-vU-71f"/>
+                            <constraint firstItem="dht-ea-Zft" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="R26-SP-q6v"/>
+                            <constraint firstItem="bkS-5R-nLi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="brb-jy-o3J"/>
+                            <constraint firstItem="dht-ea-Zft" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="hY8-Ge-L0P"/>
+                            <constraint firstAttribute="trailing" secondItem="bkS-5R-nLi" secondAttribute="trailing" id="jlt-ph-134"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Countries" id="tI4-EF-MTp">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="yQ4-Ly-PIf">
+                            <connections>
+                                <action selector="addCountry:" destination="BYZ-38-t0r" id="KkJ-VR-kSH"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="countriesTableView" destination="bkS-5R-nLi" id="B7V-2H-wWn"/>
+                        <outlet property="countryTextField" destination="i2c-FX-tIm" id="vvQ-Lm-1ff"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1076" y="103.89805097451276"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="h1C-P5-xyM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="c7v-uC-FgA" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ceo-rT-XTX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Tca-Bh-NBx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="E0k-uq-eQP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="69.599999999999994" y="-578.86056971514245"/>
         </scene>
     </scenes>
 </document>

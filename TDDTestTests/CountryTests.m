@@ -76,6 +76,7 @@
     
     [viewCon.countryTextField setText:[country name]];
     
+    #pragma clang diagnostic ignored "-Warc-performSelector-leaks"
     [[viewCon.addCountryButton target] performSelector:[viewCon.addCountryButton action] withObject:viewCon.addCountryButton];
     
     XCTAssertEqualObjects([[viewCon.countries lastObject] name], [country name]);

@@ -446,7 +446,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.nsi.tdd-test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "41d50aae-51b8-4086-bb8a-c1b66cbe393f";
+				PROVISIONING_PROFILE = "0df7ac12-7711-4867-a21a-9083c707c0de";
+				PROVISIONING_PROFILE_SPECIFIER = "NSI Dev App Wildcard Profile";
 			};
 			name = Debug;
 		};
